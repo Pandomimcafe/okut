@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ýyi Hisset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #4CAF50;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message">
+            Burada harika bir mesaj olacak!
+        </div>
+        <button onclick="generateMessage()">Yeni Mesaj</button>
+    </div>
+
+    <script>
+        const messages = [
+            "Bugün harika bir gün, senin için güzel þeyler olacak!",
+            "Sen çok deðerli bir insansýn, her þeyin en iyisi seni bekliyor!",
+            "Hayat güzel, sen de o güzelliði hak ediyorsun!",
+            "Her þey yolunda, içindeki gücü hisset!",
+            "Baþarý seninle, adýmlarýný güvenle at!",
+            "Kendine güven, senin içinde büyük bir güç var!"
+        ];
+
+        function generateMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
